@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ajoutez ici des styles globaux personnalisés si nécessaire */
+/* Exemple pour appliquer la couleur du thème via une variable CSS */
+body {
+  --theme-color: #facc15; /* Couleur jaune par défaut de Tailwind yellow-400 */
+  background-color: #f8f8f8; /* Fond léger par défaut */
+  color: #333; /* Texte sombre par défaut */
+}
+
+/* Utilisation de la variable pour les éléments accentués */
+.accent-bg {
+    background-color: var(--theme-color);
+}
+ .accent-text {
+    color: var(--theme-color);
+}
+
+/* Style pour le menu latéral (juste une base) */
+.side-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.side-menu.open {
+    transform: translateX(0);
+}
